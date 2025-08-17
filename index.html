@@ -8,57 +8,83 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      line-height: 1.5;
-      padding-top: 60px; /* Make room for fixed navbar */
+      padding-top: 60px; /* Space for navbar */
+      background-color: #f4f4f4;
     }
 
-    /* Fixed Top Navigation */
+    /* Top Navigation */
     .topnav {
       background-color: #333;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       position: fixed;
       top: 0;
       width: 100%;
       height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       z-index: 1000;
     }
 
     .topnav a {
       color: white;
+      padding: 14px 20px;
       text-decoration: none;
-      margin: 0 15px;
       font-size: 16px;
     }
 
     .topnav a:hover {
-      text-decoration: underline;
+      background-color: #575757;
     }
 
     .topnav a.active {
-      font-weight: bold;
+      background-color: #04AA6D;
     }
 
-    /* Page Container */
-    .page {
-      max-width: 200px;
-      margin: auto;
-      padding: 20px;
+    /* Main content container */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 30px;
     }
 
-    .page img {
-      display: block;
-      max-width: 150px;
+    .text-section {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .image-section {
+      flex-shrink: 0;
+    }
+
+    .image-section img {
+      max-width: 180px;
       height: auto;
-      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .text-section {
+        padding-right: 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Navigation Bar -->
+  <!-- Top Navigation -->
   <div class="topnav">
     <a href="index.html" class="active">Home</a>
     <a href="#">Research</a>
