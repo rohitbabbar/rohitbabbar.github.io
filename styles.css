@@ -80,9 +80,9 @@ h3 {
 }
 
 h1 {
-  margin-bottom: 24px;
-  font-size: clamp(2.8rem, 7vw, 5.7rem);
-  letter-spacing: -0.045em;
+  margin-bottom: 20px;
+  font-size: clamp(2.35rem, 5vw, 4.25rem);
+  letter-spacing: -0.035em;
 }
 
 h2 {
@@ -212,7 +212,7 @@ p {
 
 .hero {
   overflow: hidden;
-  padding: clamp(70px, 10vw, 125px) 0;
+  padding: clamp(52px, 7vw, 88px) 0;
   background:
     radial-gradient(circle at 84% 28%, rgba(0, 111, 115, 0.13), transparent 28rem),
     linear-gradient(180deg, #ffffff 0%, #f9fbfc 100%);
@@ -220,9 +220,9 @@ p {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.65fr);
+  grid-template-columns: minmax(0, 1.65fr) minmax(230px, 0.55fr);
   align-items: center;
-  gap: clamp(48px, 8vw, 100px);
+  gap: clamp(36px, 6vw, 72px);
 }
 
 .eyebrow {
@@ -242,7 +242,7 @@ p {
   max-width: 760px;
   margin-bottom: 18px;
   color: var(--text);
-  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-size: clamp(1.08rem, 1.8vw, 1.32rem);
   line-height: 1.55;
 }
 
@@ -311,19 +311,19 @@ p {
 
 .hero-photo-wrap {
   position: relative;
-  width: min(100%, 380px);
+  width: min(100%, 290px);
   justify-self: end;
 }
 
 .hero-photo-wrap::before {
   position: absolute;
-  top: 24px;
-  right: -24px;
-  bottom: -24px;
-  left: 24px;
+  top: 16px;
+  right: -16px;
+  bottom: -16px;
+  left: 16px;
   z-index: 0;
   background: var(--accent-soft);
-  border-radius: 28px;
+  border-radius: 22px;
   content: "";
 }
 
@@ -334,7 +334,7 @@ p {
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center;
-  border-radius: 28px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
 }
 
@@ -825,7 +825,7 @@ p {
   }
 
   .hero-photo-wrap {
-    width: min(78%, 380px);
+    width: min(64%, 300px);
     justify-self: start;
   }
 
@@ -864,7 +864,7 @@ p {
   }
 
   .hero-photo-wrap {
-    width: min(88%, 360px);
+    width: min(72%, 280px);
   }
 
   .section-heading-row {
