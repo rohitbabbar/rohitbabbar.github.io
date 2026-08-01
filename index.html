@@ -1,39 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Rohit's homepage </title>
+  <style> 
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
 
-  <title>Rohit Babbar | Efficient and Scalable Machine Learning</title>
-  <meta name="description" content="Academic homepage of Rohit Babbar, Senior Lecturer (Associate Professor) at the University of Bath, working on efficient machine learning, sparse neural networks, large output spaces and efficient LLMs.">
-  <meta name="author" content="Rohit Babbar">
+    /* Top Navigation */
+    .topnav {
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
 
-  <meta property="og:title" content="Rohit Babbar | Efficient and Scalable Machine Learning">
-  <meta property="og:description" content="Research on resource-efficient machine learning, sparse neural networks, large output spaces and efficient LLMs.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="rohit-pic.jpeg">
+    .topnav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
 
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
+    .topnav a:hover {
+      background-color: #575757;
+    }
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91ZF55EGC9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-91ZF55EGC9');
-  </script>
+    .topnav a.active {
+      background-color: #04AA6D;
+    }
+
+    /* Main content container */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 60px;
+    }
+
+    .text-section {
+      flex: 1;
+      min-width: 350px;
+    }
+
+    .image-section {
+      flex-shrink: 0;
+    }
+
+    .image img {
+      max-width: 170px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+
+    .image-section img {
+      max-width: 100px;
+      height: 10px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 100px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .text-section {
+        padding-right: 0;
+      }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-91ZF55EGC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-91ZF55EGC9');
+</script>
 </head>
-
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="nav-container">
-      <a class="site-name" href="index.html" aria-label="Rohit Babbar homepage">
-        Rohit Babbar
-      </a>
+  <!-- Top Navigation -->
+  <div class="topnav">
+    <a href="index.html" class="active">Home</a>
+    <a href="#">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="#">Teaching</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="container">
+    <div class="text">
+      <h1> 
+    Rohit Babbar
+  </h1> 
+  <p> 
+    Senior Lecturer (Associate Professor)<br>
+    Department of Computer Science<br>
+    University of Bath, UK<br>
+    <a href=mailto:rb2608--AT--bath.ac.uk>rb2608--AT--bath.ac.uk</a> 
+   <!--  <a href=https://scholar.google.com/citations?user=QsqvuGsAAAAJ>Google Scholar</a> -->
+   <!-- <a href="cv.pdf">CV (PDF)</a> -->
+  </p>
+    </div>
+    <div class="image">
+      <img src="rohit-pic.jpeg" alt="A photo of me or relevant image">
+    </div>
+  </div>
+<p>
+        Hello, I am a Senior Lecturer (Associate Professor) at the Computer Science department of the University of Bath, UK. 
+        With my PhD students, we are working on exciting problems on sparse and memory/energy efficient neural networks 
+        for learning in large output spaces and Large Language Models (LLMs). I am also looking for motivated PhD students to join my group at the University of Bath, UK. 
+        Please reach out at rb2608--AT--bath.ac.uk, if you are interested in joining!
+      </p>
+</body>
+
+  <h2>Research Interests</h2>
+  <p>Artificial Intelligence, Resource-efficient Machine Learning, Learning in large output spaces, AI safety</p>
+
+  <h2>Recent Publications</h2>
+  <ul>
+    <li><strong>Hardware-Aware Dynamic Sparse Training for Large Output Spaces</strong>.<br> Nasib Ullah, Jinbin Zhang, Jean Lucien Randrianantenaina, Erik Schultheis, and Rohit Babbar.<br> <em>43rd International Conference on Machine Learning, ICML 2026, Seoul, South Korea</em> [<a href="https://arxiv.org/pdf/2606.01117">PDF</a>] [<a href="https://github.com/xmc-aalto/haste">Code</a>] </li>
+    <li><strong>DynaSpec : Context-aware Dynamic Speculative Sampling for Large-Vocabulary Language Models</strong>.<br> Jinbin Zhang, Nasib Ullah, Erik Schultheis, and Rohit Babbar.<br> <em>Arxiv Preprint </em> [<a href="https://arxiv.org/pdf/2510.13847?">PDF</a>] [<a href="https://github.com/xmc-aalto/DynaSpec">Code</a>]</li>
+    <li><strong>ELMO: Efficiency via Low-precision and Peak Memory Optimization in Large Output Spaces</strong>.<br> Jinbin Zhang, Nasib Ullah, Erik Schultheis, and Rohit Babbar.<br> <em>42nd International Conference on Machine Learning, ICML 2025, Vancouver, Canada</em> [<a href="https://openreview.net/pdf?id=d6CTIPrTTC">PDF</a>] [<a href="https://github.com/xmc-aalto/elmo">Code</a>]</li>
+    <li><strong>Unbiased Loss Functions for Multilabel Classification with Missing Labels</strong>.<br> Erik Schultheis, and Rohit Babbar.<br> <em>Transations of Machine Learning Research, TMLR 2025</em> [<a href="https://openreview.net/pdf?id=hMq1hUhLqp">PDF</a>] [<a href="https://github.com/xmc-aalto/missing-labels-tmlr">Code</a>]</li>
+    <li><strong>UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-Label Classification</strong>.<br> Siddhant Kharbanda, Devaansh Gupta, Gururaj K, Pankaj Malhotra, Cho-Jui Hsieh, and Rohit Babbar.<br> <em>The Web Conference, WebConf 2025, Sydney, Australia</em> [<a href="https://arxiv.org/pdf/2405.03714">PDF</a>] [<a href="https://github.com/the-catalyst/UniDEC">Code</a>]</li>
+    <li><strong>How Well Calibrated are Extreme Multi-label Classifiers? An Empirical Analysis</strong>.<br> Nasib Ullah, Erik Schultheis, Jinbin Zhang and Rohit Babbar. <br> <em>31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, KDD 2025, Toronto, Canada </em> [<a href="https://dl.acm.org/doi/pdf/10.1145/3690624.3709333">PDF</a>] [<a href="https://github.com/xmc-aalto/xmc-topk-calibration">Code</a>] </li>
+    <li><strong>Large Language Model as a Teacher for Zero-shot Tagging at Extreme Scales</strong>. <br>Nasib Ullah, Jinbin Zhang and Rohit Babbar. <br> <em>31st International Conference on Computational Linguistics, COLING, 2025, Abu-Dhabi, UAE  </em> [<a href="https://aclanthology.org/2025.coling-main.233.pdf">PDF</a>] [<a href="https://github.com/xmc-aalto/LMTX">Code</a>]</li>
+    <li><strong>Navigating Extremes : Dynamic Sparsity in Large Output Spaces</strong>. <br> Nasib Ullah, Erik Schultheis, Mike Lasby, Yani Ioannou and Rohit Babbar. <br> <em>38th Conference on Neural Information Processing Systems, NeurIPS, 2024, Vancouver, Canada </em> [<a href="https://openreview.net/pdf?id=RA6rzOJ2zI">PDF</a>] [<a href="https://github.com/xmc-aalto/NeurIPS24-dst">Code</a>]</li>
+    <li><strong>Gandalf : Learning Label-label correlations in Extreme Multi-label Classification via Label Features</strong>. Siddhant Kharbanda, Devaansh Gupta, Erik Schultheis, Atmadeep Banerjee, Cho-Jui Hsieh, and Rohit Babbar <br> <em>30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, KDD 2024, Barcelona, Spain </em> [<a href="https://dl.acm.org/doi/10.1145/3637528.3672063">PDF</a>]</li>
+    <li><strong>A General Online Algorithm for Optimizing Complex Performance Metrics</strong>. <br> Wojciech Kotlowski, Erik Schultheis, Marek Wydmuch, Rohit Babbar, and Krzysztof Dembczyński <br> <em>41st International Conference on Machine Learning, ICML 2024, Vienna, Austria  </em> [<a href="https://proceedings.mlr.press/v235/kotlowski24a.html">PDF</a>] [<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
+    <li><strong>Consistent Algorithms for Multi-label Classification with Macro@k Metrics</strong>. <br> Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski, Rohit Babbar, Strom Borman, and Krzysztof Dembczyński. <br> <em>12th International Conference on Learning Representations, ICLR 2024, Vienna, Austria </em> [<a href="https://openreview.net/pdf?id=XOnya9gSdF">PDF</a>] [<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
+    <li><strong>Generalized Test Utilities for Long-tail Performance in Extreme Multi-label Classification</strong>. <br> Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski, Rohit Babbar, and Krzysztof Dembczyński <br> <em>37th Conference on Neural Information Processing Systems, NeurIPS, 2023, New Orleans, USA </em> [<a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/46994b3d6dd0fd5fca5f780af6259db5-Paper-Conference.pdf">PDF</a>][<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
+    <li><strong>Towards Memory-Efficient Training for Extremely Large Output Spaces -- Learning with 500k Labels on a Single Commodity GPU</strong>. <br> Erik Schultheis, and Rohit Babbar <br> <em>ECML-PKDD, 2023, Torino, Italy </em> [<a href="https://link.springer.com/chapter/10.1007/978-3-031-43418-1_41">PDF</a>][<a href="https://github.com/xmc-aalto/ecml23-sparse">Code</a>]</li>
+
+  </ul>
+
+  <h2>Teaching</h2>
+  <ul>
+    <li> Foundational Machine Learning (Fall 2025)</li>
+    <li> Natural Language Processing (Fall 2025)</li>
+    <li> Machine Learning - Foundations and Frontiers (Spring 2025)</li>
+    <li> Machine Learning - 1 (Fall 2024)</li>
+  </ul>
+
+  <h2>Contact</h2>
+  <p>
+    Office: Wessex House <br>
+    Claverton Down<br>
+    Bath, BA2 7AY, UK
+  </p>
+</body>
+</html>
+I created the complete, responsive GitHub Pages website.
+Download the complete website package
+
+The package contains:
+
+index.html — redesigned homepage
+publications.html — searchable and year-filterable publications page
+styles.css — responsive styling for desktop, tablet and mobile
+script.js — mobile navigation and publication filtering
+README.md — deployment instructions
+You need to copy your existing rohit-pic.jpeg into the same directory after extracting the ZIP.
+Deployment
+Replace the files in the root of your rohitbabbar.github.io repository, then run:
+git add .
+git commit -m "Redesign academic homepage"
+git push
+The redesigned site includes:
+a modern academic homepage;
+working Research, Group, Teaching and Contact navigation;
+Google Scholar, GitHub and email links;
+featured-publication cards;
+a research-group section;
+a prominent PhD opportunities section;
+corrected publication formatting;
+mobile navigation;
+publication search and year filters;
+your existing Google Analytics configuration.
+I used the functional email address:
+rb2608@bath.ac.uk
+rather than the displayed obfuscated address, so the mailto: links work correctly. 
+explain the deployment process, I am not an expert in git
+The easiest method is to use the GitHub website in your browser. You do not need to install Git or use Terminal.
+Step 1: Download and unzip the website
+Download the package:
+Download the redesigned website
+
+On your Mac:
+
+Open Downloads.
+Double-click rohitbabbar-github-pages.zip.
+A folder named rohitbabbar-github-pages will appear.
+Inside it, you should see:
+index.html
+publications.html
+styles.css
+script.js
+README.md
+Step 2: Add your photograph
+The package does not contain your existing photograph.
+Find the current file named:
+
+rohit-pic.jpeg
+Copy it into the newly extracted rohitbabbar-github-pages folder.
+The final folder should contain:
+
+index.html
+publications.html
+styles.css
+script.js
+README.md
+rohit-pic.jpeg
+The photograph must be named exactly rohit-pic.jpeg, including the lowercase letters and .jpeg extension.
+Step 3: Open your GitHub repository
+Sign in to GitHub and open:
+https://github.com/rohitbabbar/rohitbabbar.github.io
+You should see your existing files, including the old index.html.
+Step 4: Upload the new files
+On the repository page:
+Click Add file.
+Select Upload files.
+Open the extracted rohitbabbar-github-pages folder on your computer.
+Select these files:
+index.html
+publications.html
+styles.css
+script.js
+README.md
+rohit-pic.jpeg
+Drag them into the GitHub upload area.
+GitHub will recognise that some files, such as index.html, already exist and will replace their contents when the changes are committed. GitHub officially supports uploading files through the browser using Add file → Upload files.
+Do not upload the ZIP file itself. Upload the individual files contained inside it.
+
+Step 5: Save the changes
+At the bottom of the upload page, find Commit changes.
+In the description box, enter:
+
+Redesign academic homepage
+Select:
+Commit directly to the main branch
+Then click the green Commit changes button.
+A “commit” simply means saving a recorded version of your changes. GitHub’s documented browser workflow allows you to upload files and commit them directly to the main branch.
+
+Step 6: Check the live website
+After committing, open:
+https://rohitbabbar.github.io/
+Refresh the page. On Safari, you can force a full refresh using:
+Command + Option + R
+Also check the publications page:
+https://rohitbabbar.github.io/publications.html
+GitHub Pages may briefly show the previous version because of browser or deployment caching. You can check deployment status inside the repository:
+Open the Actions tab.
+Look for a workflow named something similar to pages build and deployment.
+A green tick means deployment succeeded.
+A yellow circle means it is still running.
+A red cross means the deployment failed.
+Step 7: Confirm GitHub Pages settings only if the site does not update
+Normally, your existing site already has GitHub Pages configured. If it does not update:
+Open the repository.
+Click Settings.
+In the left sidebar, click Pages.
+Under Build and deployment, check that the source is configured to publish from the repository.
+For a simple site such as this, the branch will normally be:
+main
+and the folder:
+/ (root)
+Save the setting if necessary.
+Safest optional step: preserve the old site
+Before uploading, you can download a backup of the current repository:
+Open the repository.
+Click the green Code button.
+Select Download ZIP.
+Keep that ZIP somewhere safe.
+GitHub also retains earlier commits, so the previous version can normally be restored even after replacement.
+One likely issue to check
+Your existing HTML displayed the email as:
+rb2608--AT--bath.ac.uk
+The redesigned site uses a working email link:
+rb2608@bath.ac.uk
+Please confirm that this is the correct email before publishing.
+I reduced both the headline and photograph, tightened the gap between them, and shortened the hero section vertically.
+Download the updated website
+
+To update your live site, you only need to replace styles.css in GitHub:
+
+Open your rohitbabbar.github.io repository.
+Click styles.css.
+Click the pencil icon to edit it, or delete and re-upload the new styles.css.
+Commit the change.
+Refresh your webpage after deployment.
+The headline now has a maximum size of approximately 68 px instead of 91 px, and the photograph is approximately 290 px wide instead of 380 px. 
+I want to revert back to the original version
+Use the earlier redesigned version, before the headline and photo were reduced:
+Download the original redesigned website
+
+To revert your live site, upload the original styles.css from this ZIP and replace the current styles.css in your GitHub repository. Then commit the change.
+no before your changes
+You mean the original simple webpage you had before my redesign.
+Replace your current index.html with the original code you pasted earlier. You should also restore your previous publications.html if you replaced it during the redesign.
+
+The safest way through GitHub is:
+
+Open your rohitbabbar.github.io repository.
+Click Commits near the top of the repository.
+Open the commit immediately before “Redesign academic homepage”.
+Open index.html.
+Click View file or Browse files at this point.
+Copy the old index.html contents.
+Return to the current repository, open index.html, click the pencil icon, replace everything, and commit.
+Alternatively, GitHub may offer a Revert button on the redesign commit. That is the cleanest option because it restores all changed files together, including index.html, publications.html, styles.css and script.js.
+Your original index.html is the full code you included in your earlier message, beginning with:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+and using the dark grey fixed navigation bar and the 800 px-wide page layout.
+Do not use either of the ZIP files I generated, because both contain the redesigned version.
+
+
+
+
 
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
         <span class="sr-only">Toggle navigation</span>
