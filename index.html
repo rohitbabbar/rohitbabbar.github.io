@@ -1,175 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Rohit's homepage </title>
-  <style> 
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Top Navigation */
-    .topnav {
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+  <title>Rohit Babbar | Efficient and Scalable Machine Learning</title>
+  <meta name="description" content="Academic homepage of Rohit Babbar, Senior Lecturer (Associate Professor) at the University of Bath, working on efficient machine learning, sparse neural networks, large output spaces and efficient LLMs.">
+  <meta name="author" content="Rohit Babbar">
 
-    .topnav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-size: 16px;
-    }
+  <meta property="og:title" content="Rohit Babbar | Efficient and Scalable Machine Learning">
+  <meta property="og:description" content="Research on resource-efficient machine learning, sparse neural networks, large output spaces and efficient LLMs.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="rohit-pic.jpeg">
 
-    .topnav a:hover {
-      background-color: #575757;
-    }
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 
-    .topnav a.active {
-      background-color: #04AA6D;
-    }
-
-    /* Main content container */
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 60px;
-    }
-
-    .text-section {
-      flex: 1;
-      min-width: 350px;
-    }
-
-    .image-section {
-      flex-shrink: 0;
-    }
-
-    .image img {
-      max-width: 170px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-
-    .image-section img {
-      max-width: 100px;
-      height: 10px;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 100px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .text-section {
-        padding-right: 0;
-      }
-    }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-91ZF55EGC9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-91ZF55EGC9');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91ZF55EGC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91ZF55EGC9');
+  </script>
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Top Navigation -->
-  <div class="topnav">
-    <a href="index.html" class="active">Home</a>
-    <a href="#">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="#">Teaching</a>
-    <a href="#">Contact</a>
-  </div>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="site-name" href="index.html" aria-label="Rohit Babbar homepage">
+        Rohit Babbar
+      </a>
 
-  <div class="container">
-    <div class="text">
-      <h1> 
-    Rohit Babbar
-  </h1> 
-  <p> 
-    Senior Lecturer (Associate Professor)<br>
-    Department of Computer Science<br>
-    University of Bath, UK<br>
-    <a href=mailto:rb2608--AT--bath.ac.uk>rb2608--AT--bath.ac.uk</a> 
-   <!--  <a href=https://scholar.google.com/citations?user=QsqvuGsAAAAJ>Google Scholar</a> -->
-   <!-- <a href="cv.pdf">CV (PDF)</a> -->
-  </p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a class="active" href="index.html">Home</a>
+        <a href="#research">Research</a>
+        <a href="#group">Group</a>
+        <a href="publications.html">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="image">
-      <img src="rohit-pic.jpeg" alt="A photo of me or relevant image">
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="page-width hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">University of Bath · Department of Computer Science</p>
+
+          <h1>Efficient machine learning at extreme scale</h1>
+
+          <p class="hero-lead">
+            I am <strong>Rohit Babbar</strong>, a Senior Lecturer (Associate Professor)
+            at the University of Bath. My group develops resource-efficient learning
+            methods for large neural networks, large output spaces and large language models.
+          </p>
+
+          <p class="hero-description">
+            Our research spans sparse training, low-precision computation,
+            hardware-aware algorithms, extreme multi-label classification and
+            efficient LLM inference.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">Explore research</a>
+            <a class="button button-secondary" href="publications.html">View publications</a>
+          </div>
+
+          <div class="profile-links" aria-label="Professional links">
+            <a href="https://scholar.google.com/citations?user=QsqvuGsAAAAJ" target="_blank" rel="noopener noreferrer">
+              Google Scholar
+            </a>
+            <a href="https://github.com/xmc-aalto" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+            <a href="mailto:rb2608@bath.ac.uk">
+              Email
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo-wrap">
+          <img
+            class="hero-photo"
+            src="rohit-pic.jpeg"
+            alt="Portrait of Rohit Babbar"
+            width="480"
+            height="600"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" aria-labelledby="research-heading" id="research">
+      <div class="page-width">
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-heading">Research themes</h2>
+          <p>
+            My work focuses on machine-learning methods that remain accurate,
+            scalable and deployable under demanding computational constraints.
+          </p>
+        </div>
+
+        <div class="card-grid research-grid">
+          <article class="card">
+            <div class="card-number">01</div>
+            <h3>Efficient large language models</h3>
+            <p>
+              Sparse, low-precision and speculative methods for reducing the
+              memory and inference cost of large language models.
+            </p>
+            <p class="card-tags">Speculative decoding · Sparse fine-tuning · Low precision</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">02</div>
+            <h3>Hardware-aware sparse learning</h3>
+            <p>
+              Sparsity structures and training algorithms designed to translate
+              theoretical operation reductions into practical accelerator speedups.
+            </p>
+            <p class="card-tags">Dynamic sparsity · GPU efficiency · Structured sparsity</p>
+          </article>
+
+          <article class="card">
+            <div class="card-number">03</div>
+            <h3>Learning in extreme output spaces</h3>
+            <p>
+              Scalable classification, retrieval and recommendation methods for
+              problems involving hundreds of thousands or millions of outputs.
+            </p>
+            <p class="card-tags">Extreme classification · Retrieval · Long-tail learning</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="page-width">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 id="featured-heading">Featured publications</h2>
+          </div>
+          <a class="text-link" href="publications.html">See all publications →</a>
+        </div>
+
+        <div class="featured-list">
+          <article class="featured-item">
+            <div class="featured-meta">
+              <span class="venue">ICML 2026</span>
+              <span>Hardware-aware sparse learning</span>
+            </div>
+            <div>
+              <h3>HASTE: Hardware-Aware Dynamic Sparse Training for Large Output Spaces</h3>
+              <p>
+                Nasib Ullah, Jinbin Zhang, Jean Lucien Randrianantenaina,
+                Erik Schultheis and <strong>Rohit Babbar</strong>.
+              </p>
+              <div class="publication-links">
+                <a href="https://arxiv.org/pdf/2606.01117" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a href="https://github.com/xmc-aalto/haste" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-item">
+            <div class="featured-meta">
+              <span class="venue">Preprint</span>
+              <span>Efficient LLM inference</span>
+            </div>
+            <div>
+              <h3>DynaSpec: Context-aware Dynamic Speculative Sampling for Large-Vocabulary Language Models</h3>
+              <p>
+                Jinbin Zhang, Nasib Ullah, Erik Schultheis and
+                <strong>Rohit Babbar</strong>.
+              </p>
+              <div class="publication-links">
+                <a href="https://arxiv.org/pdf/2510.13847" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a href="https://github.com/xmc-aalto/DynaSpec" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-item">
+            <div class="featured-meta">
+              <span class="venue">ICML 2025</span>
+              <span>Low-precision learning</span>
+            </div>
+            <div>
+              <h3>ELMO: Efficiency via Low-precision and Peak Memory Optimization in Large Output Spaces</h3>
+              <p>
+                Jinbin Zhang, Nasib Ullah, Erik Schultheis and
+                <strong>Rohit Babbar</strong>.
+              </p>
+              <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=d6CTIPrTTC" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a href="https://github.com/xmc-aalto/elmo" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-item">
+            <div class="featured-meta">
+              <span class="venue">NeurIPS 2024</span>
+              <span>Dynamic sparse training</span>
+            </div>
+            <div>
+              <h3>Navigating Extremes: Dynamic Sparsity in Large Output Spaces</h3>
+              <p>
+                Nasib Ullah, Erik Schultheis, Mike Lasby, Yani Ioannou and
+                <strong>Rohit Babbar</strong>.
+              </p>
+              <div class="publication-links">
+                <a href="https://openreview.net/pdf?id=RA6rzOJ2zI" target="_blank" rel="noopener noreferrer">PDF</a>
+                <a href="https://github.com/xmc-aalto/NeurIPS24-dst" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" aria-labelledby="group-heading" id="group">
+      <div class="page-width group-layout">
+        <div>
+          <p class="eyebrow eyebrow-light">Research group</p>
+          <h2 id="group-heading">People and collaboration</h2>
+          <p class="section-intro-light">
+            I work with researchers interested in efficient machine learning,
+            sparse neural networks, large output spaces and efficient LLM systems.
+          </p>
+        </div>
+
+        <div class="people-list">
+          <article>
+            <h3>Nasib Ullah</h3>
+            <p>Dynamic sparse training and hardware-aware learning</p>
+          </article>
+
+          <article>
+            <h3>Jinbin Zhang</h3>
+            <p>Efficient LLM inference and low-precision learning</p>
+          </article>
+
+          <article>
+            <h3>Jean Lucien Randrianantenaina</h3>
+            <p>Efficient training and large-scale machine learning</p>
+          </article>
+
+          <article>
+            <h3>Erik Schultheis</h3>
+            <p>Alumnus and collaborator in extreme classification and efficient learning</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="opportunities-heading">
+      <div class="page-width opportunity-box">
+        <div>
+          <p class="eyebrow">Join the group</p>
+          <h2 id="opportunities-heading">PhD and research opportunities</h2>
+          <p>
+            I welcome enquiries from prospective PhD students and research
+            collaborators working on efficient machine learning, sparse neural
+            networks, large output spaces and efficient LLM systems.
+          </p>
+          <p>
+            Please include a CV, academic transcript, a concise description of
+            your research interests, and links to relevant publications or code.
+          </p>
+        </div>
+
+        <a class="button button-primary" href="mailto:rb2608@bath.ac.uk?subject=Prospective%20PhD%20or%20research%20enquiry">
+          Contact me
+        </a>
+      </div>
+    </section>
+
+    <section class="section section-muted" aria-labelledby="teaching-heading" id="teaching">
+      <div class="page-width two-column">
+        <div class="section-heading">
+          <p class="eyebrow">Teaching</p>
+          <h2 id="teaching-heading">Current and recent teaching</h2>
+        </div>
+
+        <ul class="clean-list teaching-list">
+          <li>
+            <span>Foundational Machine Learning</span>
+            <span>Autumn 2025</span>
+          </li>
+          <li>
+            <span>Natural Language Processing</span>
+            <span>Autumn 2025</span>
+          </li>
+          <li>
+            <span>Machine Learning: Foundations and Frontiers</span>
+            <span>Spring 2025</span>
+          </li>
+          <li>
+            <span>Machine Learning I</span>
+            <span>Autumn 2024</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="page-width footer-grid">
+      <div>
+        <h2>Rohit Babbar</h2>
+        <p>
+          Senior Lecturer (Associate Professor)<br>
+          Department of Computer Science<br>
+          University of Bath
+        </p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>
+          Wessex House<br>
+          Claverton Down<br>
+          Bath, BA2 7AY, UK
+        </p>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:rb2608@bath.ac.uk">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=QsqvuGsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+          <li><a href="https://github.com/xmc-aalto" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-<p>
-        Hello, I am a Senior Lecturer (Associate Professor) at the Computer Science department of the University of Bath, UK. 
-        With my PhD students, we are working on exciting problems on sparse and memory/energy efficient neural networks 
-        for learning in large output spaces and Large Language Models (LLMs). I am also looking for motivated PhD students to join my group at the University of Bath, UK. 
-        Please reach out at rb2608--AT--bath.ac.uk, if you are interested in joining!
-      </p>
-</body>
 
-  <h2>Research Interests</h2>
-  <p>Artificial Intelligence, Resource-efficient Machine Learning, Learning in large output spaces, AI safety</p>
-
-  <h2>Recent Publications</h2>
-  <ul>
-    <li><strong>Hardware-Aware Dynamic Sparse Training for Large Output Spaces</strong>.<br> Nasib Ullah, Jinbin Zhang, Jean Lucien Randrianantenaina, Erik Schultheis, and Rohit Babbar.<br> <em>43rd International Conference on Machine Learning, ICML 2026, Seoul, South Korea</em> [<a href="https://arxiv.org/pdf/2606.01117">PDF</a>] [<a href="https://github.com/xmc-aalto/haste">Code</a>] </li>
-    <li><strong>DynaSpec : Context-aware Dynamic Speculative Sampling for Large-Vocabulary Language Models</strong>.<br> Jinbin Zhang, Nasib Ullah, Erik Schultheis, and Rohit Babbar.<br> <em>Arxiv Preprint </em> [<a href="https://arxiv.org/pdf/2510.13847?">PDF</a>] [<a href="https://github.com/xmc-aalto/DynaSpec">Code</a>]</li>
-    <li><strong>ELMO: Efficiency via Low-precision and Peak Memory Optimization in Large Output Spaces</strong>.<br> Jinbin Zhang, Nasib Ullah, Erik Schultheis, and Rohit Babbar.<br> <em>42nd International Conference on Machine Learning, ICML 2025, Vancouver, Canada</em> [<a href="https://openreview.net/pdf?id=d6CTIPrTTC">PDF</a>] [<a href="https://github.com/xmc-aalto/elmo">Code</a>]</li>
-    <li><strong>Unbiased Loss Functions for Multilabel Classification with Missing Labels</strong>.<br> Erik Schultheis, and Rohit Babbar.<br> <em>Transations of Machine Learning Research, TMLR 2025</em> [<a href="https://openreview.net/pdf?id=hMq1hUhLqp">PDF</a>] [<a href="https://github.com/xmc-aalto/missing-labels-tmlr">Code</a>]</li>
-    <li><strong>UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-Label Classification</strong>.<br> Siddhant Kharbanda, Devaansh Gupta, Gururaj K, Pankaj Malhotra, Cho-Jui Hsieh, and Rohit Babbar.<br> <em>The Web Conference, WebConf 2025, Sydney, Australia</em> [<a href="https://arxiv.org/pdf/2405.03714">PDF</a>] [<a href="https://github.com/the-catalyst/UniDEC">Code</a>]</li>
-    <li><strong>How Well Calibrated are Extreme Multi-label Classifiers? An Empirical Analysis</strong>.<br> Nasib Ullah, Erik Schultheis, Jinbin Zhang and Rohit Babbar. <br> <em>31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, KDD 2025, Toronto, Canada </em> [<a href="https://dl.acm.org/doi/pdf/10.1145/3690624.3709333">PDF</a>] [<a href="https://github.com/xmc-aalto/xmc-topk-calibration">Code</a>] </li>
-    <li><strong>Large Language Model as a Teacher for Zero-shot Tagging at Extreme Scales</strong>. <br>Nasib Ullah, Jinbin Zhang and Rohit Babbar. <br> <em>31st International Conference on Computational Linguistics, COLING, 2025, Abu-Dhabi, UAE  </em> [<a href="https://aclanthology.org/2025.coling-main.233.pdf">PDF</a>] [<a href="https://github.com/xmc-aalto/LMTX">Code</a>]</li>
-    <li><strong>Navigating Extremes : Dynamic Sparsity in Large Output Spaces</strong>. <br> Nasib Ullah, Erik Schultheis, Mike Lasby, Yani Ioannou and Rohit Babbar. <br> <em>38th Conference on Neural Information Processing Systems, NeurIPS, 2024, Vancouver, Canada </em> [<a href="https://openreview.net/pdf?id=RA6rzOJ2zI">PDF</a>] [<a href="https://github.com/xmc-aalto/NeurIPS24-dst">Code</a>]</li>
-    <li><strong>Gandalf : Learning Label-label correlations in Extreme Multi-label Classification via Label Features</strong>. Siddhant Kharbanda, Devaansh Gupta, Erik Schultheis, Atmadeep Banerjee, Cho-Jui Hsieh, and Rohit Babbar <br> <em>30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, KDD 2024, Barcelona, Spain </em> [<a href="https://dl.acm.org/doi/10.1145/3637528.3672063">PDF</a>]</li>
-    <li><strong>A General Online Algorithm for Optimizing Complex Performance Metrics</strong>. <br> Wojciech Kotlowski, Erik Schultheis, Marek Wydmuch, Rohit Babbar, and Krzysztof Dembczyński <br> <em>41st International Conference on Machine Learning, ICML 2024, Vienna, Austria  </em> [<a href="https://proceedings.mlr.press/v235/kotlowski24a.html">PDF</a>] [<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
-    <li><strong>Consistent Algorithms for Multi-label Classification with Macro@k Metrics</strong>. <br> Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski, Rohit Babbar, Strom Borman, and Krzysztof Dembczyński. <br> <em>12th International Conference on Learning Representations, ICLR 2024, Vienna, Austria </em> [<a href="https://openreview.net/pdf?id=XOnya9gSdF">PDF</a>] [<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
-    <li><strong>Generalized Test Utilities for Long-tail Performance in Extreme Multi-label Classification</strong>. <br> Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski, Rohit Babbar, and Krzysztof Dembczyński <br> <em>37th Conference on Neural Information Processing Systems, NeurIPS, 2023, New Orleans, USA </em> [<a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/46994b3d6dd0fd5fca5f780af6259db5-Paper-Conference.pdf">PDF</a>][<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
-    <li><strong>Towards Memory-Efficient Training for Extremely Large Output Spaces -- Learning with 500k Labels on a Single Commodity GPU</strong>. <br> Erik Schultheis, and Rohit Babbar <br> <em>ECML-PKDD, 2023, Torino, Italy </em> [<a href="https://link.springer.com/chapter/10.1007/978-3-031-43418-1_41">PDF</a>][<a href="https://github.com/xmc-aalto/ecml23-sparse">Code</a>]</li>
-
-  </ul>
-
-  <h2>Teaching</h2>
-  <ul>
-    <li> Foundational Machine Learning (Fall 2025)</li>
-    <li> Natural Language Processing (Fall 2025)</li>
-    <li> Machine Learning - Foundations and Frontiers (Spring 2025)</li>
-    <li> Machine Learning - 1 (Fall 2024)</li>
-  </ul>
-
-  <h2>Contact</h2>
-  <p>
-    Office: Wessex House <br>
-    Claverton Down<br>
-    Bath, BA2 7AY, UK
-  </p>
+    <div class="page-width footer-bottom">
+      <p>© <span id="current-year"></span> Rohit Babbar.</p>
+      <p>Built for GitHub Pages.</p>
+    </div>
+  </footer>
 </body>
 </html>
-

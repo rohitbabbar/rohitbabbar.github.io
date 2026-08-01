@@ -1,122 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr. Rohit Babbar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* Top Navigation */
-    .topnav {
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
+  <title>Publications | Rohit Babbar</title>
+  <meta name="description" content="Selected publications by Rohit Babbar on efficient machine learning, sparse neural networks, extreme classification and efficient LLMs.">
 
-    .topnav a {
-      color: white;
-      padding: 14px 20px;
-      text-decoration: none;
-      font-size: 16px;
-    }
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
 
-    .topnav a:hover {
-      background-color: #575757;
-    }
-
-    .topnav a.active {
-      background-color: #04AA6D;
-    }
-
-    /* Main content container */
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      gap: 60px;
-    }
-
-    .text-section {
-      flex: 1;
-      min-width: 350px;
-    }
-
-    .image-section {
-      flex-shrink: 0;
-    }
-
-    .image img {
-      max-width: 170px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-
-    .image-section img {
-      max-width: 100px;
-      height: 10px;
-      border-radius: 8px;
-    }
-
-    @media (max-width: 100px) {
-      .container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .text-section {
-        padding-right: 0;
-      }
-    }
-  </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-91ZF55EGC9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-91ZF55EGC9');
+  </script>
 </head>
+
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Top Navigation -->
-  <div class="topnav">
-    <a href="index.html" class="active">Home</a>
-    <a href="#">Research</a>
-    <a href="#">Publications</a>
-    <a href="#">Teaching</a>
-    <a href="#">Contact</a>
-  </div>
+  <header class="site-header">
+    <div class="nav-container">
+      <a class="site-name" href="index.html">Rohit Babbar</a>
 
-  <div style="margin-top: 100px;"></div> <!-- Adds 50px of vertical space -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-  
-  <h2>Recent Publications</h2>
-  <ul>
-    <li><strong>ELMO: Efficiency via Low-precision and Peak Memory Optimization in Large Output Spaces</strong>.<br> Jinbin Zhang, Nasib Ullah, Erik Schultheis, and Rohit Babbar.<br> <em>42nd International Conference on Machine Learning, ICML 2025, Vancouver, Canada</em> [<a href="https://openreview.net/pdf?id=d6CTIPrTTC">PDF</a>] [<a href="https://github.com/xmc-aalto/elmo">Code</a>]</li>
-    <li><strong>UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-Label Classification</strong>.<br> Siddhant Kharbanda, Devaansh Gupta, Gururaj K, Pankaj Malhotra, Cho-Jui Hsieh, and Rohit Babbar.<br> <em>The Web Conference, WebConf 2025, Sydney, Australia</em> [<a href="https://arxiv.org/pdf/2405.03714">PDF</a>] </li>
-    <li><strong>How Well Calibrated are Extreme Multi-label Classifiers? An Empirical Analysis</strong>.<br> Nasib Ullah, Erik Schultheis, Jinbin Zhang and Rohit Babbar. <br> <em>31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, KDD 2025, Toronto, Canada </em> [<a href="https://dl.acm.org/doi/pdf/10.1145/3690624.3709333">PDF</a>] [<a href="https://github.com/xmc-aalto/xmc-topk-calibration">Code</a>] </li>
-    <li><strong>Large Language Model as a Teacher for Zero-shot Tagging at Extreme Scales</strong>. <br>Nasib Ullah, Jinbin Zhang and Rohit Babbar. <br> <em>31st International Conference on Computational Linguistics, COLING, 2025, Abu-Dhabi, UAE  </em> [<a href="https://aclanthology.org/2025.coling-main.233.pdf">PDF</a>] [<a href="https://github.com/xmc-aalto/LMTX">Code</a>]</li>
-    <li><strong>Navigating Extremes : Dynamic Sparsity in Large Output Spaces</strong>. <br> Nasib Ullah, Erik Schultheis, Mike Lasby, Yani Ioannou and Rohit Babbar. <br> <em>38th Conference on Neural Information Processing Systems, NeurIPS, 2024, Vancouver, Canada </em> [<a href="https://openreview.net/pdf?id=RA6rzOJ2zI">PDF</a>] [<a href="https://github.com/xmc-aalto/NeurIPS24-dst">Code</a>]</li>
-    <li><strong>Gandalf : Learning Label-label correlations in Extreme Multi-label Classification via Label Features</strong>. Siddhant Kharbanda, Devaansh Gupta, Erik Schultheis, Atmadeep Banerjee, Cho-Jui Hsieh, and Rohit Babbar <br> <em>30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, KDD 2024, Barcelona, Spain </em> [<a href="https://dl.acm.org/doi/10.1145/3637528.3672063">PDF</a>]</li>
-    <li><strong>A General Online Algorithm for Optimizing Complex Performance Metrics</strong>. <br> Wojciech Kotlowski, Erik Schultheis, Marek Wydmuch, Rohit Babbar, and Krzysztof Dembczyński <br> <em>41st International Conference on Machine Learning, ICML 2024, Vienna, Austria  </em> [<a href="https://proceedings.mlr.press/v235/kotlowski24a.html">PDF</a>] [<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
-    <li><strong>Consistent Algorithms for Multi-label Classification with Macro@k Metrics</strong>. <br> Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski, Rohit Babbar, Strom Borman, and Krzysztof Dembczyński. <br> <em>12th International Conference on Learning Representations, ICLR 2024, Vienna, Austria </em> [<a href="https://openreview.net/pdf?id=XOnya9gSdF">PDF</a>] [<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
-    <li><strong>Generalized Test Utilities for Long-tail Performance in Extreme Multi-label Classification</strong>. <br> Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski, Rohit Babbar, and Krzysztof Dembczyński <br> <em>37th Conference on Neural Information Processing Systems, NeurIPS, 2023, New Orleans, USA </em> [<a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/46994b3d6dd0fd5fca5f780af6259db5-Paper-Conference.pdf">PDF</a>][<a href="https://github.com/mwydmuch/xCOLUMNs">Code</a>]</li>
-    <li><strong>Towards Memory-Efficient Training for Extremely Large Output Spaces -- Learning with 500k Labels on a Single Commodity GPU</strong>. <br> Erik Schultheis, and Rohit Babbar <br> <em>ECML-PKDD, 2023, Torino, Italy </em> [<a href="https://link.springer.com/chapter/10.1007/978-3-031-43418-1_41">PDF</a>][<a href="https://github.com/xmc-aalto/ecml23-sparse">Code</a>]</li>
+      <nav id="primary-navigation" class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#group">Group</a>
+        <a class="active" href="publications.html">Publications</a>
+        <a href="index.html#teaching">Teaching</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  </ul>
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="page-width">
+        <p class="eyebrow">Research output</p>
+        <h1>Publications</h1>
+        <p>
+          Selected publications on efficient machine learning, sparse neural
+          networks, extreme multi-label classification and efficient LLM inference.
+        </p>
 
+        <div class="profile-links">
+          <a href="https://scholar.google.com/citations?user=QsqvuGsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://github.com/xmc-aalto" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="page-width publications-layout">
+        <aside class="publication-filter" aria-label="Publication filters">
+          <h2>Filter</h2>
+
+          <label for="publication-search">Search publications</label>
+          <input
+            id="publication-search"
+            type="search"
+            placeholder="Title, author, venue or year"
+            autocomplete="off"
+          >
+
+          <div class="filter-buttons" aria-label="Filter by year">
+            <button class="filter-button active" type="button" data-year="all">All</button>
+            <button class="filter-button" type="button" data-year="2026">2026</button>
+            <button class="filter-button" type="button" data-year="2025">2025</button>
+            <button class="filter-button" type="button" data-year="2024">2024</button>
+            <button class="filter-button" type="button" data-year="2023">2023</button>
+          </div>
+        </aside>
+
+        <div>
+          <p id="publication-count" class="publication-count" aria-live="polite"></p>
+
+          <div id="publication-list" class="publication-list">
+            <article class="publication" data-year="2026">
+              <div class="publication-year">2026</div>
+              <div>
+                <h2>Hardware-Aware Dynamic Sparse Training for Large Output Spaces</h2>
+                <p class="authors">
+                  Nasib Ullah, Jinbin Zhang, Jean Lucien Randrianantenaina,
+                  Erik Schultheis and <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">
+                  43rd International Conference on Machine Learning (ICML), Seoul, South Korea.
+                </p>
+                <div class="publication-links">
+                  <a href="https://arxiv.org/pdf/2606.01117" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/haste" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2025">
+              <div class="publication-year">2025</div>
+              <div>
+                <h2>DynaSpec: Context-aware Dynamic Speculative Sampling for Large-Vocabulary Language Models</h2>
+                <p class="authors">
+                  Jinbin Zhang, Nasib Ullah, Erik Schultheis and
+                  <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">arXiv preprint.</p>
+                <div class="publication-links">
+                  <a href="https://arxiv.org/pdf/2510.13847" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/DynaSpec" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2025">
+              <div class="publication-year">2025</div>
+              <div>
+                <h2>ELMO: Efficiency via Low-precision and Peak Memory Optimization in Large Output Spaces</h2>
+                <p class="authors">
+                  Jinbin Zhang, Nasib Ullah, Erik Schultheis and
+                  <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">
+                  42nd International Conference on Machine Learning (ICML), Vancouver, Canada.
+                </p>
+                <div class="publication-links">
+                  <a href="https://openreview.net/pdf?id=d6CTIPrTTC" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/elmo" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2025">
+              <div class="publication-year">2025</div>
+              <div>
+                <h2>Unbiased Loss Functions for Multilabel Classification with Missing Labels</h2>
+                <p class="authors">
+                  Erik Schultheis and <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">Transactions of Machine Learning Research (TMLR).</p>
+                <div class="publication-links">
+                  <a href="https://openreview.net/pdf?id=hMq1hUhLqp" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/missing-labels-tmlr" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2025">
+              <div class="publication-year">2025</div>
+              <div>
+                <h2>UniDEC: Unified Dual Encoder and Classifier Training for Extreme Multi-Label Classification</h2>
+                <p class="authors">
+                  Siddhant Kharbanda, Devaansh Gupta, Gururaj K, Pankaj Malhotra,
+                  Cho-Jui Hsieh and <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">The Web Conference, Sydney, Australia.</p>
+                <div class="publication-links">
+                  <a href="https://arxiv.org/pdf/2405.03714" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/the-catalyst/UniDEC" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2025">
+              <div class="publication-year">2025</div>
+              <div>
+                <h2>How Well Calibrated are Extreme Multi-label Classifiers? An Empirical Analysis</h2>
+                <p class="authors">
+                  Nasib Ullah, Erik Schultheis, Jinbin Zhang and
+                  <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">
+                  31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Toronto, Canada.
+                </p>
+                <div class="publication-links">
+                  <a href="https://dl.acm.org/doi/pdf/10.1145/3690624.3709333" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/xmc-topk-calibration" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2025">
+              <div class="publication-year">2025</div>
+              <div>
+                <h2>Large Language Model as a Teacher for Zero-shot Tagging at Extreme Scales</h2>
+                <p class="authors">
+                  Nasib Ullah, Jinbin Zhang and <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">
+                  31st International Conference on Computational Linguistics (COLING), Abu Dhabi, UAE.
+                </p>
+                <div class="publication-links">
+                  <a href="https://aclanthology.org/2025.coling-main.233.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/LMTX" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2024">
+              <div class="publication-year">2024</div>
+              <div>
+                <h2>Navigating Extremes: Dynamic Sparsity in Large Output Spaces</h2>
+                <p class="authors">
+                  Nasib Ullah, Erik Schultheis, Mike Lasby, Yani Ioannou and
+                  <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">
+                  38th Conference on Neural Information Processing Systems (NeurIPS), Vancouver, Canada.
+                </p>
+                <div class="publication-links">
+                  <a href="https://openreview.net/pdf?id=RA6rzOJ2zI" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/NeurIPS24-dst" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2024">
+              <div class="publication-year">2024</div>
+              <div>
+                <h2>Gandalf: Learning Label-label Correlations in Extreme Multi-label Classification via Label Features</h2>
+                <p class="authors">
+                  Siddhant Kharbanda, Devaansh Gupta, Erik Schultheis,
+                  Atmadeep Banerjee, Cho-Jui Hsieh and <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">
+                  30th ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Barcelona, Spain.
+                </p>
+                <div class="publication-links">
+                  <a href="https://dl.acm.org/doi/10.1145/3637528.3672063" target="_blank" rel="noopener noreferrer">PDF</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2024">
+              <div class="publication-year">2024</div>
+              <div>
+                <h2>A General Online Algorithm for Optimizing Complex Performance Metrics</h2>
+                <p class="authors">
+                  Wojciech Kotlowski, Erik Schultheis, Marek Wydmuch,
+                  <strong>Rohit Babbar</strong> and Krzysztof Dembczyński.
+                </p>
+                <p class="venue-line">
+                  41st International Conference on Machine Learning (ICML), Vienna, Austria.
+                </p>
+                <div class="publication-links">
+                  <a href="https://proceedings.mlr.press/v235/kotlowski24a.html" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/mwydmuch/xCOLUMNs" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2024">
+              <div class="publication-year">2024</div>
+              <div>
+                <h2>Consistent Algorithms for Multi-label Classification with Macro@k Metrics</h2>
+                <p class="authors">
+                  Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski,
+                  <strong>Rohit Babbar</strong>, Strom Borman and Krzysztof Dembczyński.
+                </p>
+                <p class="venue-line">
+                  12th International Conference on Learning Representations (ICLR), Vienna, Austria.
+                </p>
+                <div class="publication-links">
+                  <a href="https://openreview.net/pdf?id=XOnya9gSdF" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/mwydmuch/xCOLUMNs" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2023">
+              <div class="publication-year">2023</div>
+              <div>
+                <h2>Generalized Test Utilities for Long-tail Performance in Extreme Multi-label Classification</h2>
+                <p class="authors">
+                  Erik Schultheis, Marek Wydmuch, Wojciech Kotlowski,
+                  <strong>Rohit Babbar</strong> and Krzysztof Dembczyński.
+                </p>
+                <p class="venue-line">
+                  37th Conference on Neural Information Processing Systems (NeurIPS), New Orleans, USA.
+                </p>
+                <div class="publication-links">
+                  <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/46994b3d6dd0fd5fca5f780af6259db5-Paper-Conference.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/mwydmuch/xCOLUMNs" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="publication" data-year="2023">
+              <div class="publication-year">2023</div>
+              <div>
+                <h2>Towards Memory-Efficient Training for Extremely Large Output Spaces: Learning with 500k Labels on a Single Commodity GPU</h2>
+                <p class="authors">
+                  Erik Schultheis and <strong>Rohit Babbar</strong>.
+                </p>
+                <p class="venue-line">ECML-PKDD, Turin, Italy.</p>
+                <div class="publication-links">
+                  <a href="https://link.springer.com/chapter/10.1007/978-3-031-43418-1_41" target="_blank" rel="noopener noreferrer">PDF</a>
+                  <a href="https://github.com/xmc-aalto/ecml23-sparse" target="_blank" rel="noopener noreferrer">Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <p id="no-publications" class="no-results" hidden>
+            No publications match the selected filters.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-grid">
+      <div>
+        <h2>Rohit Babbar</h2>
+        <p>
+          Senior Lecturer (Associate Professor)<br>
+          Department of Computer Science<br>
+          University of Bath
+        </p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>
+          Wessex House<br>
+          Claverton Down<br>
+          Bath, BA2 7AY, UK
+        </p>
+      </div>
+
+      <div>
+        <h3>Links</h3>
+        <ul class="footer-links">
+          <li><a href="mailto:rb2608@bath.ac.uk">Email</a></li>
+          <li><a href="https://scholar.google.com/citations?user=QsqvuGsAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a></li>
+          <li><a href="https://github.com/xmc-aalto" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="page-width footer-bottom">
+      <p>© <span id="current-year"></span> Rohit Babbar.</p>
+      <p>Built for GitHub Pages.</p>
+    </div>
+  </footer>
 </body>
 </html>
